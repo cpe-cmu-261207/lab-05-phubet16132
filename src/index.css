@@ -1,13 +1,120 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  font-family:"Barlow";
+  background-color: whitesmoke;
+  color: whitesmoke;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 36px ;
+  background-color:  rgb(255, 153, 0) ;
+}
+
+.colorhgpa{
+  color : whitesmoke;
+}
+
+.colorCal{
+  color: rgb(44, 79, 235);
+}
+
+.colorC{
+  color: rgb(44, 79, 235);
+  font-size: 32px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.borderGPA1{
+  min-height: 350px;
+  max-width: 1200px ;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 4px solid  rgb(255, 153, 0) ;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  max-height: 350px;
+}
+
+.inputbox{
+  min-height: 100px;
+  padding: 10px;
+  max-width: 1000px ;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 18px;
+  padding: 24px;
+  background-color:rgb(44, 79, 235);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.inputbox aside{
+  position: relative;
+}
+
+.GPATEXT{
+  position: absolute;
+  top: 50%;
+  font-size: 32px;
+  transform: translate(0,-50%);
+}
+
+.GPA{
+  background-color: rgb(255, 153, 0) ;
+  font-size: 32px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label{
+  display: block;
+  font-family:"Barlow";
+}
+
+input{
+  font-family:"Barlow";
+  border: 0mm;
+  border-radius: 4px;
+  padding: 5px;
+  width: 80%;
+}
+
+select{
+  font-family:"Barlow";
+  border: 0mm;
+  border-radius: 4px;
+  width: 80%;
+  
+}
+
+.input{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.add{
+  margin-right: 20px;
+  padding: 3px;
+  border-radius: 10px;
+  background-color:rgb(255, 153, 0) ;
+  color:whitesmoke ;
+  transition: 0.3s;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgb(255, 153, 0)  ;
+}
+.add:hover{
+  color:rgb(255, 153, 0) ;
+  border: 2px solid rgb(255, 153, 0)  ;
+  background-color:whitesmoke;
 }
