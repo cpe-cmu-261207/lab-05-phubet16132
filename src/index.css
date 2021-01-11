@@ -36,6 +36,8 @@ body {
   margin-bottom: 30px;
   margin-top: 15px;
   max-height: 350px;
+  position: relative;
+  padding: 20px;
 }
 
 .inputbox{
@@ -117,4 +119,23 @@ select{
   color:rgb(255, 153, 0) ;
   border: 2px solid rgb(255, 153, 0)  ;
   background-color:whitesmoke;
+}
+
+.courseCard{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color:  rgb(255, 153, 0);
+  max-width: 1150px;
+  min-height: 80px ;
+  border-radius: 15px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 24px;
+  
+}
+
+.courseCard aside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
