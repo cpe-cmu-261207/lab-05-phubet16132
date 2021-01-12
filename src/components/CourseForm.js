@@ -1,20 +1,23 @@
 import { GRADES } from "../utils/grades";
 import { CREDITS } from "../utils/credits";
 import { useContext, useReducer, useState } from "react";
+import {KhemDev} from "../App"
 
-const CourseForm = () => {
+
+const CourseForm = (props) => {
+  const setCourse = useContext(KhemDev)
   const initState = {ID : "" , Credit : 1 , Grade : 0}
   const [state,dispatch] = useReducer((Ps,Act)=>{
       switch (Act.type){
         case "setID" : return {...Ps,ID : Act.value}
         case "setCredit" : return {...Ps,Credit : Act.value}
-        case "setGarde" : return {...Ps,Grade : Act.value}
+        case "setGrade" : return {...Ps,Grade : Act.value}
       }
   }, initState)
   return (
     
     <div className="inputbox">
-        <aside><div className="GPATEXT">GPA : </div><div className="GPA">4.00</div></aside>
+        <aside><div className="GPATEXT">GPA : </div><div className="GPA">{props.gpa}</div></aside>
         <aside className="input">
           <aside><div><label>Subject ID :</label><input placeholder = "Input Subject ID" onChange = {(e) => dispatch({type : "setID" , value : e.target.value})}></input></div></aside>
           <aside>
@@ -42,7 +45,7 @@ const CourseForm = () => {
                 <option value ="-1"> W</option>
               </select>
             </div>
-            <div><button className="add">add</button></div>
+            <div><button className="add" onClick={()=>setCourse(state)}>add</button></div>
           </aside>
         </aside>
       </div>
